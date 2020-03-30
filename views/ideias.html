@@ -1,0 +1,45 @@
+{%extends "layout.html"%}
+
+{% block title %}
+    <title>Ideias - Casa criativa</title>
+{% endblock title %}
+<!--    
+    
+    <body id="page-ideas">
+-->
+
+{% set bodyId = "page-ideas" %}
+
+
+{%block content %}
+    <div id="container">
+        
+        <header>
+            <a href="/">
+                <img src="logo.png" alt="Imagem da Logomarca">
+            </a>
+            <nav>
+                <li><a href="/">Início</a></li>
+                <li><a href="#" class="button" onclick="onOff()">Nova Ideia</a></li>
+            </nav>
+        </header>
+            
+        <section id="title">
+            <p>em exibição</p>
+            <h1>ideias</h1>
+        </section>
+    
+        <main>
+            <section id="ideas">
+
+            {% include "all_ideas.html" %}
+                
+            </section>
+    
+        </main>
+    
+        <footer>
+            com 🖤 <a href="https://www.google.com/search?q=neg%C3%A3o+da+piroca&oq=neg%C3%A3o+da+piroca&aqs=chrome..69i57.1588j0j7&sourceid=chrome&ie=UTF-8" target="_blank">O Negão</a> 
+        </footer>
+    </div>
+{% endblock %}
